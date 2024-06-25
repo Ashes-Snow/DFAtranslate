@@ -1,0 +1,38 @@
+digraph DFA {
+  rankdir=LR;  // 横向布局
+
+ node [shape = circle];   // 初始状态
+
+ACDEFHVX[shape = doublecircle];
+  ACEGH [label="State ACEGH\n(startState)"];
+  ABCEFHJKM [label="State ABCEFHJKM"];
+  ACDEFH [label="State ACDEFH"];
+  ABCEFHJKLMP [label="State ABCEFHJKLMP"];
+  ACDEFHNP [label="State ACDEFHNP"];
+  ACDEFHNPRSU [label="State ACDEFHNPRSU"];
+  ACDEFHRSU [label="State ACDEFHRSU"];
+  ABCEFHJKMTX [label="State ABCEFHJKMTX"];
+  ACDEFHRSUVX [label="State ACDEFHRSUVX"];
+  ACDEFHVX [label="State ACDEFHVX\n(endState)"];
+
+  ACEGH -> ABCEFHJKM [label="a"];
+  ACEGH -> ACDEFH [label="b"];
+  ABCEFHJKM -> ABCEFHJKLMP [label="a"];
+  ABCEFHJKM -> ACDEFHNP [label="b"];
+  ACDEFH -> ABCEFHJKM [label="a"];
+  ACDEFH -> ACDEFH [label="b"];
+  ABCEFHJKLMP -> ABCEFHJKLMP [label="a"];
+  ABCEFHJKLMP -> ACDEFHNPRSU [label="b"];
+  ACDEFHNP -> ABCEFHJKM [label="a"];
+  ACDEFHNP -> ACDEFHRSU [label="b"];
+  ACDEFHNPRSU -> ABCEFHJKMTX [label="a"];
+  ACDEFHNPRSU -> ACDEFHRSUVX [label="b"];
+  ACDEFHRSU -> ABCEFHJKMTX [label="a"];
+  ACDEFHRSU -> ACDEFHVX [label="b"];
+  ABCEFHJKMTX -> ABCEFHJKLMP [label="a"];
+  ABCEFHJKMTX -> ACDEFHNP [label="b"];
+  ACDEFHRSUVX -> ABCEFHJKMTX [label="a"];
+  ACDEFHRSUVX -> ACDEFHVX [label="b"];
+  ACDEFHVX -> ABCEFHJKM [label="a"];
+  ACDEFHVX -> ACDEFH [label="b"];
+}

@@ -1,0 +1,33 @@
+digraph NFA {
+  rankdir=LR;  // 横向布局
+
+ node [shape = circle];   // 状态节点
+
+X [shape=doublecircle];
+  G [label="Start State: G"];
+  X [label="End State: X"];
+  A -> B [label="a"];
+  C -> D [label="b"];
+  E -> A [label="#"];
+  E -> C [label="#"];
+  B -> F [label="#"];
+  D -> F [label="#"];
+  G -> H [label="#"];
+  F -> E [label="#"];
+  G -> E [label="#"];
+  F -> H [label="#"];
+  H -> J [label="a"];
+  K -> L [label="a"];
+  M -> N [label="b"];
+  J -> K [label="#"];
+  J -> M [label="#"];
+  L -> P [label="#"];
+  N -> P [label="#"];
+  P -> R [label="b"];
+  S -> T [label="a"];
+  U -> V [label="b"];
+  R -> S [label="#"];
+  R -> U [label="#"];
+  T -> X [label="#"];
+  V -> X [label="#"];
+}
