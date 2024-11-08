@@ -6,7 +6,7 @@
  copy the "head.h" and "源.cpp" On code. 
  open your project. 
  Import these two files. 
- and run it. 
+ save and run it. 
  finsh.
 
 #Chinese
